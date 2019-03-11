@@ -1,33 +1,142 @@
-.App {
+@import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab");
+
+body {
+  background: #677c8a;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+h1 {
+  font-family: "Pathway Gothic One", "sans-serif";
+  font-size: 2.5em;
   text-align: center;
+  display: block;
+  width: auto;
+  margin: 1%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.modal {
+  z-index: 10;
+  width: 450px;
+  height: 480px;
+  position: relative;
+  margin: 20px auto;
+  border-radius: 15px 50px 30px;
+  text-align: center;
+  -moz-background-clip: padding;
+  -o-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box; /* prevents bg color from leaking outside the border */
+  background-color: blueviolet; /* layer fill content */
+  -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.18); /* drop shadow */
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.18); /* drop shadow */
+  -o-box-shadow: 0 0 10px rgba(0, 0, 0, 0.18); /* drop shadow */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.18); /* drop shadow */
+  -webkit-transform-origin: top center;
+  -moz-transform-origin: top center;
+  -o-transform-origin: top center;
+  transform-origin: top center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.modal-animated {
+  -webkit-animation: iconosani 1.2s forwards;
+  animation: iconosani 1.2s forwards;
+  -moz-animation: iconosani 1.2s forwards;
+  -o-animation: iconosani 1.2s forwards;
+}
+
+@keyframes iconosani {
+  0% {
+    -webkit-transform: perspective(800px) rotateX(-90deg);
+    -moz-transform: perspective(800px) rotateX(-90deg);
+    -o-transform: perspective(800px) rotateX(-90deg);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: perspective(800px) rotateX(30deg);
+    -moz-transform: perspective(800px) rotateX(30deg);
+    -o-transform: perspective(800px) rotateX(30deg);
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: perspective(800px) rotateX(-10deg);
+    -moz-transform: perspective(800px) rotateX(-10deg);
+    -o-transform: perspective(800px) rotateX(-10deg);
+  }
+  100% {
+    -webkit-transform: perspective(800px) rotateX(0deg);
+    -moz-transform: perspective(800px) rotateX(0deg);
+    -o-transform: perspective(800px) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.modal-main {
+  position: fixed;
+  background: blueviolet;
+  width: 80%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-hide {
+  display: hidden;
+}
+
+.modal-green {
+  background: green;
+}
+
+.modal-red {
+  background: lightcoral;
+}
+
+.display-block {
+  display: block;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: center;
+  padding: 1%;
+}
+
+.display-none {
+  display: none;
+}
+
+.btn-group {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.btn-modal {
+  position: absolute;
+  text-align: center;
+  font-size: 0.6em;
+  right: 0;
+  bottom: 0;
+}
+
+.score-modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: top;
+  font-size: 1.2em;
+  text-align: left;
+  height: 60px;
+  width: 140px;
+  background: #45b0f9;
+  opacity: 1;
 }
